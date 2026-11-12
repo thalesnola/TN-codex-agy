@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Codex Argon result envelope",
+  "type": "object",
+  "required": ["job_id", "state", "accepted", "result"],
+  "properties": {
+    "job_id": {"type": "string"},
+    "state": {"enum": ["queued", "running", "succeeded", "failed", "cancelled", "interrupted"]},
+    "accepted": {"type": "boolean"},
+    "result": {"type": ["object", "null"]}
+  }
+}

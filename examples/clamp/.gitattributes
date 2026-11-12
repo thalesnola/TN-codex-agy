@@ -1,0 +1,4 @@
+# Keep the portable fixture and reference patch consistent across checkouts.
+*.py text eol=lf
+*.json text eol=lf
+*.patch text eol=lf

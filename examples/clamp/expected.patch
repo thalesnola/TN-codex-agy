@@ -1,0 +1,10 @@
+diff --git a/calc.py b/calc.py
+index 8b71902..f5b0402 100644
+--- a/calc.py
++++ b/calc.py
+@@ -2,4 +2,4 @@ def clamp(value, lower, upper):
+     """Limit value to the inclusive interval [lower, upper]."""
+     if lower > upper:
+         raise ValueError('lower must not exceed upper')
+-    return min(lower, max(upper, value))
++    return max(lower, min(upper, value))

@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.state/
+.runtime/
+.codex/
+argon.local.toml
+.env
+.credentials.json

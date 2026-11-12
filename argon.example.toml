@@ -1,0 +1,17 @@
+# Use --config <arquivo> para selecionar esta configuração.
+# agy_bin = '%USERPROFILE%\.gemini\bin\agy.exe'
+# state_dir = 'C:\seu-diretorio\codex-argon-state'
+concurrency = 2
+allowed_models = [
+  'gemini-4-argon-high', 'gemini-4-argon-medium', 'gemini-4-argon-low',
+  'gemini-3.8-flash-high', 'gemini-3.8-flash-medium', 'gemini-3.8-flash-low'
+]
+
+[routes]
+ask = ['gemini-4-argon-high', 'gemini-4-argon-medium']
+explore = ['gemini-4-argon-medium', 'gemini-3.8-flash-high']
+research = ['gemini-4-argon-high', 'gemini-4-argon-medium']
+challenge = ['gemini-4-argon-high', 'gemini-4-argon-medium']
+implement = ['gemini-4-argon-high', 'gemini-4-argon-medium']
+document = ['gemini-3.8-flash-high', 'gemini-4-argon-medium']
+review = ['gemini-4-argon-high', 'gemini-4-argon-medium']

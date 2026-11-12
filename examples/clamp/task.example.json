@@ -1,0 +1,16 @@
+{
+  "objective": "Synthetic integration test: fix clamp in calc.py to limit value to the inclusive interval [lower, upper]. Preserve the ValueError for lower > upper, signature and docstring. Read calc.py and test_calc.py; edit only calc.py in the snapshot. Do not edit tests, run shell commands or use MCP. Return a concise explanation.",
+  "role": "implement",
+  "source": "REPLACE_WITH_ABSOLUTE_SYNTHETIC_COPY_PATH",
+  "inputs": ["calc.py", "test_calc.py"],
+  "owns": ["calc.py"],
+  "acceptance": [
+    "All eight existing unittest tests pass unchanged",
+    "Only calc.py changes",
+    "Invalid intervals still raise ValueError"
+  ],
+  "model": "gemini-4-argon-low",
+  "timeout": 180,
+  "max_attempts": 1,
+  "idempotency_key": "REPLACE_WITH_UNIQUE_RUN_KEY"
+}

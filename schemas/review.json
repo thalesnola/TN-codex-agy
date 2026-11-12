@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Optional structured model review; Codex confirms separately",
+  "type": "object",
+  "required": ["summary", "findings"],
+  "properties": {
+    "summary": {"type": "string"},
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["severity", "file", "problem", "evidence_claimed"],
+        "properties": {
+          "severity": {"enum": ["critical", "high", "medium", "low"]},
+          "file": {"type": "string"},
+          "line": {"type": "integer", "minimum": 1},
+          "problem": {"type": "string"},
+          "evidence_claimed": {"type": "string"},
+          "confirmed_by_codex": {"const": false}
+        }
+      }
+    }
+  }
+}
